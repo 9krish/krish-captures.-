@@ -5,7 +5,7 @@
 <meta name="theme-color" content="#070707"><meta name="description" content="KRISH CAPTURES — fine-art landscape, wildlife, architecture, portrait and travel photography.">
 <title>KRISH CAPTURES — Fine Art Photography</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{color-scheme:dark;--bg:#070707;--ink:#f1f0ea;--muted:#8c8b86;--rule:#2b2b29;--pad:clamp(22px,5vw,90px)}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,sans-serif;font-weight:300;line-height:1.65}
@@ -29,6 +29,18 @@ footer{border-top:1px solid var(--rule);padding:60px var(--pad);display:flex;ali
 .viewer{position:fixed;inset:0;z-index:100;background:rgba(3,3,3,.98);display:none;align-items:center;justify-content:center;padding:65px 80px}.viewer.open{display:flex}.viewer img{width:auto;max-width:100%;max-height:80vh;object-fit:contain}.viewer button{background:none;color:white;border:0;font-size:37px;position:absolute}.close{right:30px;top:10px}.prev{left:22px}.next{right:22px}.viewer-caption{position:absolute;bottom:18px;font-size:11px;color:#aaa;letter-spacing:.15em;text-align:center}
 @media(max-width:760px){header{height:74px}.brand{font-size:17px}.menu{display:block}nav{display:none;position:absolute;left:0;top:74px;right:0;background:#090909;border-bottom:1px solid #333;padding:25px var(--pad);flex-direction:column;align-items:start}nav.open{display:flex}.hero{min-height:calc(87svh - 74px)}.hero-content{padding-bottom:8vh}.section{padding:75px var(--pad)}.section-head{display:block}.collections{grid-template-columns:1fr}.collection,.collection:first-child{grid-column:span 1;aspect-ratio:4/3}.collection-content{left:22px;bottom:20px}.gallery{gap:12px}.shot,.shot:nth-child(3n){grid-column:span 12;aspect-ratio:4/3}.intro{padding-top:75px}.about-grid,.contact-grid{grid-template-columns:1fr;padding-top:60px;gap:45px}.about-photo{min-height:400px}footer{flex-direction:column;align-items:flex-start}.viewer{padding:50px 40px}.viewer button{font-size:27px}.prev{left:5px}.next{right:5px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;transition:none!important}}
+
+/* KRISH CAPTURES — refined editorial identity */
+.brand{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(25px,2.35vw,36px);font-weight:500;letter-spacing:.035em;line-height:.98}
+.brand span{color:#eee}.brand small{font-family:Manrope,sans-serif;font-size:8px;letter-spacing:.33em;color:#999;margin-top:8px}
+.hero{align-items:center}.hero-content{padding-top:10vh;padding-bottom:10vh;max-width:1100px}
+.hero h1{font-family:"Cormorant Garamond",Georgia,serif;font-size:clamp(76px,13vw,205px);font-weight:400;letter-spacing:-.045em;line-height:.81;text-transform:none;margin:30px 0 34px;text-wrap:balance}
+.hero .eyebrow{letter-spacing:.36em;font-size:10px}
+.hero p{font-size:clamp(13px,1.2vw,16px);letter-spacing:.04em;color:#deddda}
+.intro h1,.page-title,.section-head h2,.collection h3,.about-copy h2,.contact-grid h2{font-family:"Cormorant Garamond",Georgia,serif;font-weight:400;letter-spacing:-.025em}
+.intro h1{font-size:clamp(68px,10vw,155px)}.section-head h2{font-size:clamp(52px,6vw,92px)}
+.collection h3{font-size:clamp(38px,4.4vw,66px)}.foot-logo{font-family:"Cormorant Garamond",Georgia,serif;font-size:26px;letter-spacing:.045em}
+@media(max-width:760px){.brand{font-size:25px}.hero h1{font-size:clamp(68px,15vw,118px)}.hero-content{padding-top:4vh;padding-bottom:9vh}}
 </style>
 </head>
 <body>
@@ -53,7 +65,7 @@ const collections=[
 const app=document.querySelector("#app"),nav=document.querySelector("#nav"),viewer=document.querySelector("#viewer");
 let current=[],index=0;
 function card(c){return '<a class="collection" href="#'+c.slug+'"><img loading="lazy" src="'+photo(c.ids[0],1400)+'" alt="'+c.name+' photography preview"><div class="collection-content"><span>Explore the collection</span><h3>'+c.name+'</h3></div></a>'}
-function home(){return '<section class="hero"><img src="'+photo(collections[0].ids[1],2200)+'" alt="Scenic landscape, demonstration photograph"><div class="hero-content"><div class="eyebrow">KRISH CAPTURES / FINE ART PHOTOGRAPHY</div><h1>Light. Form.<br>Feeling.</h1><p>Stories told through landscapes, wildlife, architecture, portraits, and the places in between.</p><a class="cta" href="#portfolio">Explore the work <span>↗</span></a></div></section><section class="section"><div class="section-head"><div><div class="eyebrow">SELECTED COLLECTIONS / 01—05</div><h2>Through the lens.</h2></div><p>A curated exploration of the world in five distinct perspectives.</p></div><div class="collections">'+collections.map(card).join('')+'</div></section>'}
+function home(){return '<section class="hero"><img src="'+photo(collections[0].ids[1],2200)+'" alt="Scenic landscape, demonstration photograph"><div class="hero-content"><div class="eyebrow">KRISH CAPTURES / FINE ART PHOTOGRAPHY</div><h1>Krish Captures</h1><p>Fine art photography. A considered perspective on the world.</p><a class="cta" href="#portfolio">Explore the work <span>↗</span></a></div></section><section class="section"><div class="section-head"><div><div class="eyebrow">SELECTED COLLECTIONS / 01—05</div><h2>Through the lens.</h2></div><p>A curated exploration of the world in five distinct perspectives.</p></div><div class="collections">'+collections.map(card).join('')+'</div></section>'}
 function portfolio(){return '<section class="intro"><div class="eyebrow">SELECTED WORK / FIVE COLLECTIONS</div><h1>Portfolio.</h1><p>Explore the photographs by subject. Each collection is a different way of observing the world.</p></section><section class="section"><div class="collections">'+collections.map(card).join('')+'</div></section>'}
 function category(c){return '<section class="intro"><div class="eyebrow">KRISH CAPTURES / COLLECTION</div><h1>'+c.name+'.</h1><p>'+c.description+'</p><a href="#portfolio" class="cta">← All collections</a></section><section class="gallery">'+c.ids.map((id,i)=>'<button class="shot" data-photo="'+i+'" aria-label="Open '+c.name+' photograph '+(i+1)+'"><img loading="lazy" src="'+photo(id,1300)+'" alt="'+c.name+' photograph '+(i+1)+' (sample image)"><span>Frame '+String(i+1).padStart(2,'0')+'</span></button>').join('')+'</section>'}
 function about(){return '<section class="intro"><div class="eyebrow">THE PHOTOGRAPHER</div><h1>Behind the lens.</h1><p>A little more about the person and the stories behind the photographs.</p></section><section class="about-grid"><div class="about-photo"><img src="'+SITE.aboutImage+'" alt="Demonstration photo representing a photographer"></div><div class="about-copy"><div class="eyebrow">ABOUT KRISH CAPTURES</div><h2>A lifelong fascination with seeing.</h2><p><strong style="font-weight:500;color:white">'+SITE.photographer+'</strong></p>'+SITE.bio.map(p=>'<p>'+p+'</p>').join('')+'<a href="#contact" class="cta">Get in touch ↗</a></div></section>'}
